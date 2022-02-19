@@ -11,7 +11,7 @@ String _parseTypes(Uint8List data) {
 
 Uint8List _parseArgs(Uint8List data) {
   final pos = data.indexOf(44);
-  for (var i = data.skip(pos);; i.skip(4)) {
+  for (var i = data.skip(pos);; i = i.skip(4)) {
     if (i.elementAt(3) == 0) {
       return Uint8List.fromList(i.skip(4).toList());
     }

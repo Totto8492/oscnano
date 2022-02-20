@@ -38,7 +38,7 @@ List<dynamic> _argsToList(Uint8List data) {
     } else if (t == 'T'.codeUnitAt(0)) {
       ret.add(true);
     } else {
-      print('unknown type: $t');
+      throw UnimplementedError();
     }
   }
   return ret;
